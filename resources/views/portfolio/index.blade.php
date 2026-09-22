@@ -1,0 +1,15 @@
+<x-layout>
+    @include('portfolio.partials.hero')
+    @include('portfolio.partials.quick-summary')
+    @include('portfolio.partials.about')
+    @include('portfolio.partials.skills')
+    @include('portfolio.partials.projects')
+    @include('portfolio.partials.certifications')
+    @include('portfolio.partials.education')
+    @include('portfolio.partials.experience')
+    @include('portfolio.partials.process')
+    @include('portfolio.partials.github')
+    @include('portfolio.partials.resume')
+    @include('portfolio.partials.job-target')
+    @include('portfolio.partials.contact')
+</x-layout>
