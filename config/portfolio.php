@@ -11,7 +11,7 @@
 return [
 
     'profile' => [
-        'name' => '[Your Name]',
+        'name' => 'Cyron B.Maducdoc',
         'title' => 'BSIT Graduate | Aspiring Full Stack Web Developer',
         'subtitle' => 'Web Developer • Software Developer • IT Support',
         'location' => 'Philippines',
@@ -26,7 +26,7 @@ return [
 
     'hero' => [
         'label' => 'BSIT Graduate • Web Development',
-        'heading' => "Hi, I'm [Your Name].",
+        'heading' => "Hi, I'm Cyron B.Maducdoc.",
         'subheading' => 'I build practical web applications and digital solutions.',
         'description' => "I'm a BSIT graduate specializing in web development and currently looking for an entry-level opportunity where I can apply my technical skills, contribute to real-world projects, and continue growing as a developer.",
     ],
@@ -73,7 +73,7 @@ return [
             'VS Code', 'Git', 'GitHub', 'XAMPP', 'Postman', 'Docker',
         ],
         'CMS & Website Builders' => [
-            'WordPress', 'Wix', 'Google Sites', 'Joomla',
+            'WordPress', 'Wix', 'Google Sites', 'Joomla', 'Drupal',
         ],
     ],
 
@@ -196,6 +196,33 @@ return [
             'contribution' => 'I built the Angular/Ionic frontend, including cart and checkout state management, and the FastAPI endpoints for menu items and orders.',
             'challenges' => 'Keeping cart state in sync with the backend while the user navigated between screens required a clear plan for where state should live.',
             'learned' => 'I learned how to structure frontend state management for a multi-step flow, and got hands-on practice with FastAPI as a lighter alternative to Flask.',
+            'links' => [
+                'live_demo' => null,
+                'github' => null,
+                'documentation' => null,
+            ],
+        ],
+        [
+            'slug' => 'cms-website-project',
+            'name' => '[CMS Website Project Name]',
+            'short_name' => '[CMS Website Project Name]',
+            'type' => 'Personal',
+            'role' => 'Developer',
+            'featured' => false,
+            'description' => '[Short description of the site you built — what it\'s for and who it\'s for.]',
+            'technologies' => ['WordPress', 'Wix', 'Joomla', 'Drupal'],
+            'features' => [
+                '[Feature — e.g. custom theme/template setup]',
+                '[Feature — e.g. content management for pages/posts]',
+                '[Feature — e.g. plugin/extension configuration]',
+                '[Feature — e.g. responsive layout]',
+            ],
+            'overview' => '[What the site is and which CMS platform you built it on.]',
+            'problem' => '[What need the site was solving — e.g. the client/organization needed an online presence without custom-coding everything from scratch.]',
+            'solution' => '[How you approached it — which CMS you chose, why, and what you configured or customized.]',
+            'contribution' => '[What you personally built or configured — theme setup, pages, plugins, content structure, etc.]',
+            'challenges' => '[Anything that was tricky — theme customization, plugin conflicts, hosting/deployment, etc.]',
+            'learned' => '[What working with a CMS taught you compared to coding a site from scratch.]',
             'links' => [
                 'live_demo' => null,
                 'github' => null,

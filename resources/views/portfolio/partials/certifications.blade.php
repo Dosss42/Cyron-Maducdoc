@@ -1,7 +1,7 @@
-<section id="certifications" class="scroll-mt-20 border-b border-line">
+<section id="certifications" class="reveal scroll-mt-20 border-b border-line">
     <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <p class="section-label">Certifications</p>
-        <h2 class="mt-3 text-3xl font-semibold tracking-tight text-ink">Certifications</h2>
+        <h2 class="text-h1 mt-3 text-ink">Certifications</h2>
         <p class="mt-3 max-w-2xl text-base text-muted">
             Certificates will appear here as I complete them — placeholders below until then.
         </p>
@@ -16,7 +16,7 @@
                     </div>
 
                     <div class="min-w-0 flex-1">
-                        <h3 class="text-sm font-semibold text-ink">{{ $cert['title'] }}</h3>
+                        <h3 class="text-h3 text-ink">{{ $cert['title'] }}</h3>
                         <p class="mt-1 text-sm text-muted">Issued by {{ $cert['organization'] }}</p>
                         <p class="text-sm text-muted">Earned {{ $cert['date'] }}</p>
 

@@ -4,16 +4,16 @@
     $others = $projects->reject(fn ($project) => $project['slug'] === ($featured['slug'] ?? null));
 @endphp
 
-<section id="projects" class="scroll-mt-20 border-b border-line bg-paper-soft">
+<section id="projects" class="reveal scroll-mt-20 border-b border-line bg-paper-soft">
     <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <p class="section-label">Proof of Work</p>
-        <h2 class="mt-3 text-3xl font-semibold tracking-tight text-ink">Featured Projects</h2>
+        <h2 class="text-h1 mt-3 text-ink">Featured Projects</h2>
         <p class="mt-3 max-w-2xl text-base text-muted">
             I don't have professional work experience yet, so these projects are the clearest way to see how I build things.
         </p>
 
         @if ($featured)
-            <div class="mt-10 card overflow-hidden">
+            <div class="card-interactive mt-10 overflow-hidden">
                 <div class="grid grid-cols-1 lg:grid-cols-2">
                     <x-project-thumb :project="$featured" />
 
@@ -23,7 +23,7 @@
                             <span class="text-xs text-muted">{{ $featured['role'] }}</span>
                         </div>
 
-                        <h3 class="mt-3 text-xl font-semibold text-ink">{{ $featured['name'] }}</h3>
+                        <h3 class="text-h2 mt-3 text-ink">{{ $featured['name'] }}</h3>
                         <p class="mt-2 text-sm leading-relaxed text-muted">{{ $featured['description'] }}</p>
 
                         <div class="mt-4 flex flex-wrap gap-1.5">
@@ -48,7 +48,7 @@
 
         <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             @foreach ($others as $project)
-                <div class="card flex flex-col overflow-hidden">
+                <div class="card-interactive flex flex-col overflow-hidden">
                     <x-project-thumb :project="$project" />
 
                     <div class="flex flex-1 flex-col p-5">
@@ -56,7 +56,7 @@
                             <span class="badge">{{ $project['type'] }}</span>
                         </div>
 
-                        <h3 class="mt-3 text-base font-semibold text-ink">{{ $project['short_name'] }}</h3>
+                        <h3 class="text-h3 mt-3 text-ink">{{ $project['short_name'] }}</h3>
                         <p class="mt-2 text-sm leading-relaxed text-muted">{{ $project['description'] }}</p>
 
                         <div class="mt-3 flex flex-wrap gap-1.5">

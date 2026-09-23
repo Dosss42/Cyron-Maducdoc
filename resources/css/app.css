@@ -21,6 +21,12 @@
     --color-accent: #2856c7;
     --color-accent-dark: #1e4299;
     --color-accent-soft: #eef3fd;
+
+    /* A critically-damped, no-overshoot curve — the house easing for every
+       transition-* utility site-wide. No bounce anywhere motion isn't
+       carrying momentum from a drag/flick (this site has none). */
+    --default-transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+    --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 .dark {
@@ -44,7 +50,50 @@
     body {
         background-color: var(--color-paper);
         color: var(--color-ink);
-        transition: background-color 0.15s ease, color 0.15s ease;
+        transition: background-color 150ms var(--ease-spring), color 150ms var(--ease-spring);
+    }
+}
+
+/*
+ * Type system — one deliberate scale used everywhere, instead of picking
+ * text-sm/base/lg/xl ad hoc per component. Larger sizes get tighter leading
+ * and negative tracking; smaller sizes stay near zero or slightly positive.
+ * (Apple's "Details of UI Typography" — size-specific tracking/leading.)
+ */
+@layer components {
+    .text-display {
+        font-size: clamp(2.5rem, 2rem + 2.2vw, 3.5rem);
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+    }
+
+    .text-display-sm {
+        font-size: clamp(1.875rem, 1.6rem + 1.2vw, 2.5rem);
+        line-height: 1.1;
+        letter-spacing: -0.018em;
+        font-weight: 700;
+    }
+
+    .text-h1 {
+        font-size: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem);
+        line-height: 1.2;
+        letter-spacing: -0.015em;
+        font-weight: 600;
+    }
+
+    .text-h2 {
+        font-size: 1.25rem;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+        font-weight: 600;
+    }
+
+    .text-h3 {
+        font-size: 1rem;
+        line-height: 1.4;
+        letter-spacing: -0.005em;
+        font-weight: 600;
     }
 }
 
@@ -54,7 +103,7 @@
     }
 
     .nav-link.is-active {
-        @apply text-ink;
+        @apply font-semibold text-ink;
     }
 
     .btn {
@@ -62,11 +111,21 @@
     }
 
     .btn-primary {
-        @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-2.5 text-sm font-medium transition-colors bg-accent text-white hover:bg-accent-dark;
+        @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-2.5 text-sm font-medium transition-colors bg-accent text-white hover:bg-accent-dark active:scale-[0.97];
     }
 
     .btn-secondary {
-        @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-2.5 text-sm font-medium transition-colors border border-line text-ink hover:border-ink;
+        @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-2.5 text-sm font-medium transition-colors border border-line text-ink hover:border-ink hover:bg-paper-soft active:scale-[0.97];
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        transition-duration: 150ms;
+    }
+
+    .btn-primary:active,
+    .btn-secondary:active {
+        transition-duration: 100ms;
     }
 
     .badge {
@@ -82,6 +141,91 @@
     }
 
     .card {
-        @apply rounded-lg border border-line bg-paper;
+        @apply rounded-lg border border-line bg-paper transition-colors;
+    }
+
+    /* Cards that are themselves a link/target — a small lift on hover,
+       an instant press-down on tap, never just a color swap. */
+    .card-interactive {
+        @apply rounded-lg border border-line bg-paper transition-[transform,box-shadow,border-color] duration-150 ease-out hover:-translate-y-0.5 hover:border-ink/20 hover:shadow-md active:translate-y-0 active:scale-[0.99] active:duration-100;
+    }
+}
+
+/*
+ * Header material — a translucent layer with content scrolling underneath.
+ * No hard 1px divider at rest; a soft edge only appears once there's
+ * something to separate from (JS toggles .is-scrolled on scroll).
+ */
+@layer components {
+    .site-header {
+        @apply sticky top-0 z-50 border-b border-transparent bg-paper/80 backdrop-blur-lg backdrop-saturate-150 transition-[box-shadow,border-color] duration-200;
+    }
+
+    .site-header.is-scrolled {
+        @apply border-line shadow-[0_1px_0_0_var(--color-line),0_8px_24px_-16px_rgba(0,0,0,0.25)];
+    }
+
+    /*
+     * Mobile menu — a real disclosure, not a hard show/hide. Collapses via
+     * an animatable grid track so height, opacity, and position all settle
+     * together, anchored to the header it drops from.
+     */
+    .mobile-nav {
+        display: grid;
+        grid-template-rows: 0fr;
+        opacity: 0;
+        transition: grid-template-rows 300ms var(--ease-spring), opacity 200ms var(--ease-spring);
+    }
+
+    .mobile-nav.is-open {
+        grid-template-rows: 1fr;
+        opacity: 1;
+    }
+
+    .mobile-nav > div {
+        overflow: hidden;
+        min-height: 0;
+    }
+}
+
+/* Icon cross-fades (hamburger ↔ close, moon ↔ sun) — materialize, don't just swap. */
+@layer components {
+    .icon-swap {
+        transition: opacity 150ms var(--ease-spring), transform 150ms var(--ease-spring);
+    }
+}
+
+/*
+ * Section reveal — each homepage section fades in as it enters the
+ * viewport and fades back out as it leaves (either direction), driven by
+ * an IntersectionObserver toggling .is-visible (see initScrollReveal in
+ * app.js). Kept to opacity + a small translateY, never blocking reading —
+ * a section already in view is never mid-fade.
+ */
+@layer components {
+    .reveal {
+        opacity: 0;
+        transform: translateY(1.25rem);
+        transition: opacity 500ms var(--ease-spring), transform 500ms var(--ease-spring);
+    }
+
+    .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .card-interactive:hover {
+        transform: none;
     }
 }

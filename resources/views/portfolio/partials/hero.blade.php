@@ -1,14 +1,14 @@
 @php($hero = config('portfolio.hero'))
 
-<section id="home" class="scroll-mt-20 border-b border-line">
+<section id="home" class="reveal scroll-mt-20 border-b border-line">
     <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <p class="section-label">{{ $hero['label'] }}</p>
 
-        <h1 class="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+        <h1 class="text-display mt-4 max-w-3xl text-ink">
             {{ $hero['heading'] }}
         </h1>
 
-        <p class="mt-3 max-w-2xl text-xl font-medium text-muted sm:text-2xl">
+        <p class="text-h2 mt-3 max-w-2xl text-muted">
             {{ $hero['subheading'] }}
         </p>
 

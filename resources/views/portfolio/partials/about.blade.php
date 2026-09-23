@@ -1,9 +1,9 @@
-<section id="about" class="scroll-mt-20 border-b border-line">
+<section id="about" class="reveal scroll-mt-20 border-b border-line">
     <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
             <div>
                 <p class="section-label">About</p>
-                <h2 class="mt-3 text-3xl font-semibold tracking-tight text-ink">About Me</h2>
+                <h2 class="text-h1 mt-3 text-ink">About Me</h2>
             </div>
 
             <div class="lg:col-span-2">

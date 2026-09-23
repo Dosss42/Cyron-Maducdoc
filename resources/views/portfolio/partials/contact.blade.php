@@ -1,9 +1,9 @@
 @php($profile = config('portfolio.profile'))
 
-<section id="contact" class="scroll-mt-20 bg-paper-soft">
+<section id="contact" class="reveal scroll-mt-20 bg-paper-soft">
     <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <p class="section-label">Contact</p>
-        <h2 class="mt-3 text-3xl font-semibold tracking-tight text-ink">Let's Connect</h2>
+        <h2 class="text-h1 mt-3 text-ink">Let's Connect</h2>
         <p class="mt-3 max-w-2xl text-base text-muted">
             I'm currently looking for my first professional opportunity in the IT industry. If you're hiring for an entry-level developer or IT position, I'd be happy to connect.
         </p>

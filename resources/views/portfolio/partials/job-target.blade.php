@@ -1,7 +1,7 @@
-<section id="job-target" class="scroll-mt-20 border-b border-line">
+<section id="job-target" class="reveal scroll-mt-20 border-b border-line">
     <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <p class="section-label">Job Target</p>
-        <h2 class="mt-3 text-3xl font-semibold tracking-tight text-ink">What I'm Looking For</h2>
+        <h2 class="text-h1 mt-3 text-ink">What I'm Looking For</h2>
         <p class="mt-3 max-w-2xl text-base text-muted">
             Web development is my preferred direction, but I'm open to related entry-level IT opportunities.
         </p>

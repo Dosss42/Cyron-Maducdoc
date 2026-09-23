@@ -2,7 +2,7 @@
 
     <section class="border-b border-line">
         <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-            <a href="{{ route('home') }}#projects" class="text-sm font-medium text-muted hover:text-ink">
+            <a href="{{ route('home') }}#projects" class="text-sm font-medium text-muted transition-colors hover:text-ink active:opacity-60">
                 &larr; Back to Projects
             </a>
 
@@ -11,7 +11,7 @@
                 <span class="text-xs text-muted">{{ $project['role'] }}</span>
             </div>
 
-            <h1 class="mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">{{ $project['name'] }}</h1>
+            <h1 class="text-display-sm mt-3 text-ink">{{ $project['name'] }}</h1>
             <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted">{{ $project['description'] }}</p>
 
             <div class="mt-5 flex flex-wrap gap-1.5">

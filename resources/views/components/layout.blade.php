@@ -27,6 +27,11 @@
     </script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    {{-- No JS → the scroll-reveal observer never runs, so sections must stay visible. --}}
+    <noscript>
+        <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
+    </noscript>
 </head>
 <body class="bg-paper text-ink">
 
