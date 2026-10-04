@@ -251,18 +251,39 @@ return [
     'education' => [
         [
             'degree' => 'Bachelor of Science in Information Technology',
-            'focus' => 'Web Development',
-            'school' => '[School Name]',
+            'focus' => 'Web System Technologies',
+            'school' => 'NEUST',
             'location' => 'Philippines',
-            'graduation' => '[Year]',
+            'graduation' => '2023-2027',
             'areas' => [
                 'Web Development',
                 'Programming',
                 'Database Management',
-                'Software Engineering',
-                'Systems Analysis and Design',
                 'Computer Networks',
                 'Information Systems',
+            ],
+        ],
+
+        [
+            'degree' => 'Senior HighSchool',
+            'focus' => 'TVL-ICT Strand',
+            'school' => 'General Tinio National HighSchool',
+            'location' => 'Philippines',
+            'graduation' => '2021-2027',
+            'areas' => [
+                'Hardware Servicing',
+                'Information Systems',
+            ],
+        ],
+
+           [
+            'degree' => 'Junior HighSchool',
+            'focus' => 'SP-ICT',
+            'school' => 'General Tinio National HighSchool',
+            'location' => 'Philippines',
+            'graduation' => '2017-2021',
+            'areas' => [
+               
             ],
         ],
     ],
