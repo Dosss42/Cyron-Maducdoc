@@ -9,7 +9,7 @@
                 </p>
             </div>
 
-            <a href="{{ config('portfolio.profile.github') }}" target="_blank" rel="noopener noreferrer" class="btn-primary shrink-0">
+            <a href="{{ config('https://github.com/Dosss42') }}" target="_blank" rel="noopener noreferrer" class="btn-primary shrink-0">
                 View GitHub
             </a>
         </div>
