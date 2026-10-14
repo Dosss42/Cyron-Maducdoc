@@ -122,11 +122,43 @@ return [
                 'documentation' => null,
             ],
         ],
-        [
-            'slug' => 'student-management-system',
-            'name' => 'Student Management System',
-            'short_name' => 'Student Management System',
+
+
+                [
+            'slug' => 'General Tinio National HighSchool Lan-Based Quiz System',
+            'name' => 'Lan-Based Quiz System',
+            'short_name' => 'Lan-Based Quiz System',
             'type' => 'Academic',
+            'role' => 'Full Stack Developer',
+            'featured' => false,
+            'description' => 'A CRUD-based student management application demonstrating frontend, backend, API communication, routing, and database operations.',
+            'technologies' => ['Flask', 'Javascript', 'Css', 'MySQL', 'Python'],
+            'features' => [
+                'Add, edit, and delete student records',
+                'Search and filter students',
+                'Form validation',
+                'REST API communication between Angular and PHP',
+                'MySQL data persistence',
+            ],
+            'overview' => 'A standalone student records application built to practice connecting an Angular frontend to a PHP REST API backed by MySQL.',
+            'problem' => 'I wanted hands-on practice building a real frontend-to-backend API connection instead of only working inside a monolithic framework like Laravel.',
+            'solution' => 'I built an Angular single-page frontend that communicates with a PHP REST API for full CRUD functionality on student records stored in MySQL.',
+            'contribution' => 'I built the Angular components, services, and routing, the PHP REST endpoints, and the MySQL schema for student records.',
+            'challenges' => 'Handling API errors and form validation consistently between the Angular frontend and the PHP backend took a few iterations to get right.',
+            'learned' => 'I learned how a frontend framework talks to a backend it does not share a codebase with, and how to design simple REST endpoints from scratch.',
+            'links' => [
+                'live_demo' => null,
+                'github' => null,
+                'documentation' => null,
+            ],
+        ],
+
+
+        [
+            'slug' => 'Personal Portfolio',
+            'name' => 'Personal Portfolio',
+            'short_name' => 'Personal Portfolio',
+            'type' => 'Personal',
             'role' => 'Developer',
             'featured' => false,
             'description' => 'A CRUD-based student management application demonstrating frontend, backend, API communication, routing, and database operations.',
@@ -150,10 +182,73 @@ return [
                 'documentation' => null,
             ],
         ],
+
+
+
+                [
+            'slug' => 'First Personal Portfolio',
+            'name' => 'Personal Portfolio',
+            'short_name' => 'Personal Portfolio',
+            'type' => 'Personal',
+            'role' => 'Developer',
+            'featured' => false,
+            'description' => 'A CRUD-based student management application demonstrating frontend, backend, API communication, routing, and database operations.',
+            'technologies' => ['Angular', 'TypeScript', 'PHP', 'MySQL', 'REST APIs'],
+            'features' => [
+                'Add, edit, and delete student records',
+                'Search and filter students',
+                'Form validation',
+                'REST API communication between Angular and PHP',
+                'MySQL data persistence',
+            ],
+            'overview' => 'A standalone student records application built to practice connecting an Angular frontend to a PHP REST API backed by MySQL.',
+            'problem' => 'I wanted hands-on practice building a real frontend-to-backend API connection instead of only working inside a monolithic framework like Laravel.',
+            'solution' => 'I built an Angular single-page frontend that communicates with a PHP REST API for full CRUD functionality on student records stored in MySQL.',
+            'contribution' => 'I built the Angular components, services, and routing, the PHP REST endpoints, and the MySQL schema for student records.',
+            'challenges' => 'Handling API errors and form validation consistently between the Angular frontend and the PHP backend took a few iterations to get right.',
+            'learned' => 'I learned how a frontend framework talks to a backend it does not share a codebase with, and how to design simple REST endpoints from scratch.',
+            'links' => [
+                'live_demo' => null,
+                'github' => null,
+                'documentation' => null,
+            ],
+        ],
+
+
         [
-            'slug' => 'smart-quiz-system',
-            'name' => 'Smart Quiz System',
-            'short_name' => 'Smart Quiz System',
+            'slug' => 'Ultimate Laptop Specs and Pricing Hub',
+            'name' => 'Ultimate Laptop Specs and Pricing Hub',
+            'short_name' => 'Laptop Hub',
+            'type' => 'Personal',
+            'role' => 'Full Stack Developer',
+            'featured' => false,
+            'description' => 'A CRUD-based student management application demonstrating frontend, backend, API communication, routing, and database operations.',
+            'technologies' => ['Html', 'Css', 'Javascript'],
+            'features' => [
+                'Add, edit, and delete student records',
+                'Search and filter students',
+                'Form validation',
+                'REST API communication between Angular and PHP',
+                'MySQL data persistence',
+            ],
+            'overview' => 'A standalone student records application built to practice connecting an Angular frontend to a PHP REST API backed by MySQL.',
+            'problem' => 'I wanted hands-on practice building a real frontend-to-backend API connection instead of only working inside a monolithic framework like Laravel.',
+            'solution' => 'I built an Angular single-page frontend that communicates with a PHP REST API for full CRUD functionality on student records stored in MySQL.',
+            'contribution' => 'I built the Angular components, services, and routing, the PHP REST endpoints, and the MySQL schema for student records.',
+            'challenges' => 'Handling API errors and form validation consistently between the Angular frontend and the PHP backend took a few iterations to get right.',
+            'learned' => 'I learned how a frontend framework talks to a backend it does not share a codebase with, and how to design simple REST endpoints from scratch.',
+            'links' => [
+                'live_demo' => null,
+                'github' => null,
+                'documentation' => null,
+            ],
+        ],
+
+
+        [
+            'slug' => 'Kingsway Gym Management System',
+            'name' => 'Kingsway Gym Management System',
+            'short_name' => 'Gym Management',
             'type' => 'Personal',
             'role' => 'Developer',
             'featured' => false,
@@ -177,8 +272,10 @@ return [
                 'documentation' => null,
             ],
         ],
+
+
         [
-            'slug' => 'campuseats',
+            'slug' => 'General Tinio, Mutya tabulator ',
             'name' => 'CampusEats',
             'short_name' => 'CampusEats',
             'type' => 'Personal',
@@ -236,9 +333,9 @@ return [
 
     'certifications' => [
         [
-            'title' => '[Certification Name]',
-            'organization' => '[Organization]',
-            'date' => '[Month Year]',
+            'title' => 'NATIONAL CERTIFICATE II in Computer Systems Servicing NC II',
+            'organization' => 'TESDA',
+            'date' => 'July 13,2023',
             'credential_id' => null,
             'verify_url' => null,
         ],
