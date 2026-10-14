@@ -78,7 +78,7 @@ return [
     ],
 
     // Technologies still being learned rather than used with confidence yet.
-    'learning' => ['TypeScript', 'Docker', 'Flask'],
+    'learning' => ['TypeScript', 'Docker', 'Flask', 'React', 'Angular'],
 
     'stack' => [
         'primary' => ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'PHP', 'Laravel', 'MySQL', 'Git', 'GitHub'],
