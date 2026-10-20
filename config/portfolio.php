@@ -21,7 +21,7 @@ return [
         'phone' => '+63 9613488566',
         'github' => 'https://github.com/Dosss42',
         'linkedin' => 'https://www.linkedin.com/in/cyron-maducdoc',
-        'resume_path' => 'resume.pdf',
+        'resume_path' => 'resumen.pdf',
     ],
 
     'hero' => [
